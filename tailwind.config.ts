@@ -1,11 +1,15 @@
 import type { Config } from "tailwindcss";
 
+/**
+ * Design tokens taken from the ByteSpace Figma file
+ * (Colors, Typography and Layout Grid pages).
+ */
 const config: Config = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      // ---------- COLORS ----------
       colors: {
+        // "Black" neutral scale
         neutral: {
           50: "#f5f5f6",
           100: "#e5e6e8",
@@ -19,6 +23,7 @@ const config: Config = {
           900: "#3a3b3f",
           950: "#242528",
         },
+        // "Electric Violet" primary scale (it is actually blue in the design)
         primary: {
           50: "#e7f6ff",
           100: "#d3eeff",
@@ -32,9 +37,10 @@ const config: Config = {
           900: "#0b36a4",
           950: "#071e5f",
         },
+        // "Crimson" secondary scale (it is actually lime in the design)
         secondary: {
-          50: "#fdfe4",
-          100: "#fafcf5",
+          50: "#fdffe4",
+          100: "#faffc5",
           200: "#f2ff92",
           300: "#e4ff54",
           400: "#d4fb20",
@@ -45,53 +51,39 @@ const config: Config = {
           900: "#465a0d",
           950: "#243300",
         },
+        ink: "#040819",
       },
-
-      // ---------- FONTS ----------
       fontFamily: {
-        poppins: ["var(--font-poppins)", "sans-serif"],
-        satoshi: ["var(--font-satoshi)", "sans-serif"],
+        heading: ["var(--font-poppins)", "Poppins", "system-ui", "sans-serif"],
+        body: [
+          "Satoshi",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
       },
-
-      // ---------- TYPOGRAPHY SCALE ----------
       fontSize: {
-        // Headings (Poppins SemiBold, line-height 120%)
-        "heading-l": ["72px", { lineHeight: "1.2", fontWeight: "600" }],
-        "heading-m": ["44px", { lineHeight: "1.2", fontWeight: "600" }],
-        "heading-s": ["36px", { lineHeight: "1.2", fontWeight: "600" }],
-        "heading-xs": ["20px", { lineHeight: "1.2", fontWeight: "600" }],
-
-        // Body (Satoshi Regular, line-height 160%)
-        "body-l": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
-        "body-m": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
-        "body-s": ["14px", { lineHeight: "1.6", fontWeight: "400" }],
-        "body-xs": ["12px", { lineHeight: "1.6", fontWeight: "400" }],
-
-        // Labels (Satoshi Medium, line-height 120%)
-        "label-l": ["18px", { lineHeight: "1.2", fontWeight: "500" }],
-        "label-m": ["16px", { lineHeight: "1.2", fontWeight: "500" }],
-        "label-s": ["14px", { lineHeight: "1.2", fontWeight: "500" }],
-        "label-xs": ["12px", { lineHeight: "1.2", fontWeight: "500" }],
+        // Poppins SemiBold, line-height 120%
+        "heading-l": ["4.5rem", { lineHeight: "1.2", fontWeight: "600" }],
+        "heading-m": ["2.75rem", { lineHeight: "1.2", fontWeight: "600" }],
+        "heading-s": ["2.25rem", { lineHeight: "1.2", fontWeight: "600" }],
+        "heading-xs": ["1.25rem", { lineHeight: "1.2", fontWeight: "600" }],
+        // Satoshi Regular, line-height 160%
+        "body-l": ["1.125rem", { lineHeight: "1.6" }],
+        "body-m": ["1rem", { lineHeight: "1.6" }],
+        "body-s": ["0.875rem", { lineHeight: "1.6" }],
+        "body-xs": ["0.75rem", { lineHeight: "1.6" }],
+        // Satoshi Medium, line-height 120%
+        "label-l": ["1.125rem", { lineHeight: "1.2", fontWeight: "500" }],
+        "label-m": ["1rem", { lineHeight: "1.2", fontWeight: "500" }],
+        "label-s": ["0.875rem", { lineHeight: "1.2", fontWeight: "500" }],
+        "label-xs": ["0.75rem", { lineHeight: "1.2", fontWeight: "500" }],
       },
-
-      // ---------- GRID SYSTEM ----------
-      // 12 col, margin 120px, gutter 40px
-      // 120*2 (margin) + 11*40 (gutter) = 240 + 440 = 680
-      // Design width 1440px → 1440 - 680 = 760 / 12 ≈ 63.33px col
       maxWidth: {
-        container: "1440px",
-      },
-      spacing: {
-        gutter: "40px",
-        "margin-desktop": "120px",
-        "margin-tablet": "48px",
-        "margin-mobile": "20px",
-      },
-      gridTemplateColumns: {
-        "12": "repeat(12, minmax(0, 1fr))",
-      },
-      gap: {
-        gutter: "40px",
+        page: "1440px",
       },
     },
   },
