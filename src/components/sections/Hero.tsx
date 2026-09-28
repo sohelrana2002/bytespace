@@ -1,0 +1,70 @@
+import { Shape } from "@/components/ui/Shape";
+import { HeroSearch } from "./HeroSearch";
+import { HeroVisual } from "./HeroVisual";
+
+function HeroShapes() {
+  return (
+    <div aria-hidden="true" className="hidden lg:block">
+      <Shape
+        name="squiggle-b"
+        color="lime"
+        size={387}
+        className="left-[-122px] top-[221px]"
+      />
+      <Shape
+        name="squiggle-b"
+        color="white"
+        size={176}
+        mirrored
+        className="left-[184px] top-[477px]"
+      />
+      <Shape
+        name="ring"
+        color="white"
+        size={344}
+        className="left-[40px] top-[800px] z-20"
+      />
+      <Shape
+        name="cylinder"
+        color="lime"
+        size={372}
+        className="right-[-159px] top-[220px]"
+      />
+      <Shape
+        name="pyramid"
+        color="white"
+        size={189}
+        className="right-[147px] top-[464px]"
+      />
+      <Shape
+        name="squiggle-a"
+        color="white"
+        size={332}
+        className="right-[40px] top-[772px]"
+      />
+    </div>
+  );
+}
+
+export function Hero() {
+  return (
+    <section className="relative isolate overflow-hidden bg-primary-800 pb-0 lg:h-[1160px]">
+      <div aria-hidden="true" className="bg-grid absolute inset-0 -z-10" />
+      <HeroShapes />
+
+      <div className="container-x relative z-10 flex flex-col items-center pt-[130px] text-center lg:pt-[150px]">
+        <h1 className="max-w-[900px] font-heading text-[40px] font-semibold leading-[1.2] text-white sm:text-[56px] lg:text-heading-l">
+          Get Access to Hundreds Courses Available
+        </h1>
+        <p className="mt-6 max-w-[840px] text-body-m text-white sm:text-body-l lg:mt-[50px]">
+          Unlock your creativity, gain valuable knowledge, and grow your
+          business with our wide range of courses.
+        </p>
+        <div className="mt-10 flex w-full justify-center lg:mt-[60px]">
+          <HeroSearch />
+        </div>
+        <HeroVisual />
+      </div>
+    </section>
+  );
+}
