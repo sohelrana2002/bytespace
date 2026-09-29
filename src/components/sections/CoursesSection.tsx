@@ -11,6 +11,7 @@ export function CoursesSection() {
           title={"Discover Your Passion,\nBuild Your Skills"}
           description="At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life."
           titleClassName="text-[32px] sm:text-[40px] lg:text-heading-m"
+          className="max-w-[917px]"
         />
 
         <CourseFilters />

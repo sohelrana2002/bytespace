@@ -13,6 +13,7 @@ export function CategoriesSection() {
           title="Explore Diverse Learning Paths at Bytespace"
           description="At Bytespace, we believe in empowering individuals through knowledge. Our diverse range of courses spans various fields, ensuring there's something for everyone. Unleash your potential and explore our carefully curated categories."
           titleClassName="text-[28px] sm:text-[32px] lg:text-heading-s"
+          className="max-w-[917px]"
         />
 
         <ul className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:mt-[70px] lg:grid-cols-6 lg:gap-10">

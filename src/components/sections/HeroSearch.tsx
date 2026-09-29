@@ -18,12 +18,12 @@ export function HeroSearch() {
     <form
       role="search"
       onSubmit={handleSubmit}
-      className="flex w-full max-w-[581px] items-center gap-3 sm:gap-4"
+      className="flex w-full max-w-[580px] items-start gap-4"
     >
       <label htmlFor="hero-search" className="sr-only">
         Search courses, topics or creators
       </label>
-      <div className="flex h-[52px] min-w-0 flex-1 items-center gap-3 rounded-full bg-white px-5">
+      <div className="flex h-[52px] min-w-0 flex-1 items-center gap-2.5 rounded-full bg-white px-[26px]">
         <Search
           size={20}
           className="shrink-0 text-neutral-400"
@@ -38,7 +38,7 @@ export function HeroSearch() {
           className="w-full min-w-0 bg-transparent text-body-m text-neutral-950 outline-none placeholder:text-neutral-400"
         />
       </div>
-      <Button type="submit" className="shrink-0">
+      <Button type="submit" className="h-[46px] shrink-0 px-6">
         Search
       </Button>
     </form>

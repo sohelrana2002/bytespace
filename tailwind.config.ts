@@ -83,7 +83,7 @@ const config: Config = {
         "label-xs": ["0.75rem", { lineHeight: "1.2", fontWeight: "500" }],
       },
       maxWidth: {
-        page: "1440px",
+        page: "1200px",
       },
     },
   },
