@@ -50,8 +50,8 @@ export function Header() {
             <Image
               src="/images/icons/cart.png"
               alt="Cart Image"
-              width={24}
-              height={24}
+              width={16}
+              height={20}
             />
           </button>
         </div>

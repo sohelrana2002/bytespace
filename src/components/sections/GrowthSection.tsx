@@ -53,7 +53,7 @@ function LearnerBlock() {
         <Stage width={640} height={552}>
           <CourseCard
             course={COURSES[0]}
-            className="absolute left-[18px] top-0 w-[303px]"
+            className="absolute left-[18px] top-0 w-[373px]"
           />
           <Image
             src="/images/hero-student.png"
@@ -61,15 +61,16 @@ function LearnerBlock() {
             width={516}
             height={483}
             className="absolute drop-shadow-[0_30px_40px_rgba(0,0,0,0.25)]"
-            style={{ left: 18, top: 12, width: 577, height: 510 }}
+            style={{ left: 18, top: 12, width: 577, height: 540 }}
           />
+
           <Shape
             name="squiggle-a"
             color="lime"
             size={216}
-            className="left-[375px] top-[67px] z-10"
+            className="left-[422px] top-[67px] z-10"
           />
-          <ProgressCard className="absolute left-[315px] top-[213px] !h-[138px]" />
+          <ProgressCard className="absolute left-[363px] top-[213px]" />
         </Stage>
       </div>
     </div>

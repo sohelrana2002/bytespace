@@ -16,7 +16,17 @@ export function CourseCard({
   tone = "home",
   className,
 }: CourseCardProps) {
-  const { title, author, rating, level, price, image } = course;
+  const {
+    title,
+    author,
+    rating,
+    lessons,
+    duration,
+    comments,
+    level,
+    price,
+    image,
+  } = course;
 
   return (
     <article
@@ -33,6 +43,18 @@ export function CourseCard({
           sizes="(min-width: 1024px) 341px, (min-width: 640px) 45vw, 90vw"
           className="object-cover"
         />
+        <ul className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-2 text-body-xs text-neutral-700">
+          {[`${lessons} Lessons`, duration, `${comments} Comments`].map(
+            (label) => (
+              <li
+                key={label}
+                className="whitespace-nowrap rounded-full bg-white/50 px-3 py-1 leading-[1.2] backdrop-blur-md"
+              >
+                {label}
+              </li>
+            ),
+          )}
+        </ul>
       </div>
 
       <div className="mt-4 flex items-start justify-between gap-3">

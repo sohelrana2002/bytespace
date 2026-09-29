@@ -13,8 +13,8 @@ export function HeroVisual() {
           aria-hidden="true"
           className="absolute rounded-full border-solid border-secondary-500"
           style={{
-            left: -183,
-            top: 74,
+            left: -182,
+            top: 70,
             width: 1149,
             height: 1149,
             borderWidth: 320,
@@ -28,7 +28,7 @@ export function HeroVisual() {
           height={483}
           priority
           className="absolute drop-shadow-[0_24px_36px_rgba(0,20,120,0.35)]"
-          style={{ left: 133, top: -20, width: 578, height: 541 }}
+          style={{ left: 103, top: 0, width: 578, height: 541 }}
         />
 
         <TopicCard className="absolute left-[76px] top-[127px]" />

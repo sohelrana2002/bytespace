@@ -22,7 +22,7 @@ function HeroShapes() {
         name="ring"
         color="white"
         size={344}
-        className="left-[60px] top-[681px] z-20"
+        className="left-[50px] top-[681px] z-20"
       />
       <Shape
         name="cylinder"

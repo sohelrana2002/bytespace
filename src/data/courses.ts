@@ -3,6 +3,9 @@ export interface Course {
   title: string;
   author: string;
   rating: number;
+  lessons: number;
+  duration: string;
+  comments: number;
   level: "Beginner" | "Intermediate" | "Advanced";
   price: number;
   image: string;
@@ -33,6 +36,9 @@ export const COURSES: Course[] = [
     title: "Learn Figma from Basic",
     author: "purepearl studio",
     rating: 4.5,
+    lessons: 17,
+    duration: "2 hours 16 mins",
+    comments: 59,
     level: "Beginner",
     price: 25,
     image: "/images/courses/figma.png",
@@ -42,6 +48,9 @@ export const COURSES: Course[] = [
     title: "Build Digital Asset",
     author: "purepearl studio",
     rating: 4.5,
+    lessons: 17,
+    duration: "2 hours 16 mins",
+    comments: 59,
     level: "Beginner",
     price: 25,
     image: "/images/courses/digital-asset.png",
@@ -51,6 +60,9 @@ export const COURSES: Course[] = [
     title: "the Power of Big Data",
     author: "purepearl studio",
     rating: 4.5,
+    lessons: 17,
+    duration: "2 hours 16 mins",
+    comments: 59,
     level: "Beginner",
     price: 25,
     image: "/images/courses/big-data.png",
@@ -60,6 +72,9 @@ export const COURSES: Course[] = [
     title: "Balancing Productivity and Life",
     author: "purepearl studio",
     rating: 4.5,
+    lessons: 17,
+    duration: "2 hours 16 mins",
+    comments: 59,
     level: "Beginner",
     price: 25,
     image: "/images/courses/productivity.png",
@@ -69,6 +84,9 @@ export const COURSES: Course[] = [
     title: "Mastering Money Management",
     author: "purepearl studio",
     rating: 4.5,
+    lessons: 17,
+    duration: "2 hours 16 mins",
+    comments: 59,
     level: "Beginner",
     price: 25,
     image: "/images/courses/money.png",
@@ -78,6 +96,9 @@ export const COURSES: Course[] = [
     title: "From Idea to Startup Success",
     author: "purepearl studio",
     rating: 4.5,
+    lessons: 17,
+    duration: "2 hours 16 mins",
+    comments: 59,
     level: "Beginner",
     price: 25,
     image: "/images/courses/startup.png",
