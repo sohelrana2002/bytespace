@@ -1,27 +1,29 @@
-export default function Home() {
+import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
+import { CategoriesSection } from "@/components/sections/CategoriesSection";
+import { CoursesSection } from "@/components/sections/CoursesSection";
+import { CreatorCta } from "@/components/sections/CreatorCta";
+import { GrowthSection } from "@/components/sections/GrowthSection";
+import { Hero } from "@/components/sections/Hero";
+import { LogoStrip } from "@/components/sections/LogoStrip";
+import { Testimonials } from "@/components/sections/Testimonials";
+
+export default function HomePage() {
   return (
-    <main className="p-10 space-y-6">
-      <h1 className="font-poppins text-heading-l">
-        Poppins Heading Test — 72px SemiBold
-      </h1>
-
-      <h2 className="font-poppins text-heading-m">Poppins Heading M — 44px</h2>
-
-      <p className="font-satoshi text-body-l">
-        Satoshi Body L — 18px Regular। Satoshi font render
-      </p>
-
-      <p className="font-satoshi text-body-m">
-        Satoshi Body M — 16px Regular। 0123456789
-      </p>
-
-      <p className="font-satoshi text-label-m font-medium">
-        Satoshi Medium Label — 500 weight
-      </p>
-
-      <p className="font-satoshi font-bold">
-        Satoshi Bold — 700 weight (fallback test)
-      </p>
-    </main>
+    <>
+      <div className="relative">
+        <Header />
+        <main>
+          <Hero />
+          <LogoStrip />
+          <CoursesSection />
+          <CategoriesSection />
+          <GrowthSection />
+          <CreatorCta />
+          <Testimonials />
+        </main>
+      </div>
+      <Footer />
+    </>
   );
 }
