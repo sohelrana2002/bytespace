@@ -28,7 +28,7 @@ A responsive online course marketplace landing page — including bonus Login, S
 | Language  | TypeScript                                                          |
 | Styling   | Tailwind CSS                                                        |
 | Icons     | [lucide-react](https://lucide.dev/)                                 |
-| Fonts     | Poppins (headings, via `next/font`) · Satoshi (body, via Fontshare) |
+| Fonts     | Poppins (headings, via `next/font/google`) · Satoshi (body, self-hosted via `next/font/local`) |
 
 ## 📂 Project Structure
 
