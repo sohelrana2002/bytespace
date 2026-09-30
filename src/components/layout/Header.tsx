@@ -15,7 +15,7 @@ export function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-30">
       <div className="container-x grid h-[104px] grid-cols-[1fr_auto] items-center lg:grid-cols-[1fr_auto_1fr]">
-        <Logo />
+        <Logo variant="light" />
 
         <nav aria-label="Main" className="hidden items-center gap-6 lg:flex">
           {MAIN_NAV.map((link, index) => (
