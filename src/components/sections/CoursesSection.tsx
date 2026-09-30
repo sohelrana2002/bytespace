@@ -16,7 +16,7 @@ export function CoursesSection() {
 
         <CourseFilters />
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:mt-[76px] lg:grid-cols-3 lg:gap-10">
+        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:mt-[76px] lg:grid-cols-3 lg:gap-10">
           {COURSES.map((course) => (
             <CourseCard key={course.id} course={course} />
           ))}

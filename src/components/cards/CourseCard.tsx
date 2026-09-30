@@ -39,7 +39,7 @@ export function CourseCard({
           src={image}
           alt={title}
           fill
-          sizes="(min-width: 1024px) 341px, (min-width: 640px) 45vw, 90vw"
+          sizes="(min-width: 1024px) 341px, (min-width: 768px) 45vw, 90vw"
           className="object-cover"
         />
         <ul className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-2 text-body-xs text-neutral-700">
@@ -81,10 +81,6 @@ export function CourseCard({
             width={20}
             height={20}
             alt="Label icon"
-            style={{
-              widows: 20,
-              height: 20,
-            }}
           />
           {level}
         </span>
