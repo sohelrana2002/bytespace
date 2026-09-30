@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { AvatarStack } from "@/components/ui/AvatarStack";
-import { LevelIcon } from "@/components/ui/Icons";
 import { Rating } from "@/components/ui/Rating";
 import { COURSE_STUDENT_AVATARS, type Course } from "@/data/courses";
 import { cn } from "@/lib/cn";
@@ -77,7 +76,16 @@ export function CourseCard({
 
       <div className="mt-4 flex items-center gap-3">
         <span className="inline-flex h-8 items-center gap-1.5 rounded-full bg-neutral-50 px-3 text-body-xs text-neutral-700">
-          <LevelIcon className="text-neutral-700" />
+          <Image
+            src="/images/icons/Label.png"
+            width={20}
+            height={20}
+            alt="Label icon"
+            style={{
+              widows: 20,
+              height: 20,
+            }}
+          />
           {level}
         </span>
         <AvatarStack
