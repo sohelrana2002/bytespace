@@ -8,7 +8,7 @@ A responsive online course marketplace landing page — including bonus Login, S
 
 - [https://github.com/sohelrana2002/bytespace/pull/1](https://github.com/your-username/bytespace/pull/1)
 - [https://github.com/sohelrana2002/bytespace/pull/2](https://github.com/sohelrana2002/bytespace/pull/2)
-- [https://github.com/sohelrana2002/bytespace/pull/1](https://github.com/your-username/bytespace/pull/1)
+- [https://github.com/sohelrana2002/bytespace/pull/3](https://github.com/sohelrana2002/bytespace/pull/3)
 
 ---
 
