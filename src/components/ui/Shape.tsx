@@ -5,6 +5,7 @@ import { cn } from "@/lib/cn";
 export type ShapeName =
   | "squiggle-a"
   | "squiggle-b"
+  | "squiggle-c"
   | "ring"
   | "cylinder"
   | "pyramid"
