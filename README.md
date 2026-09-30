@@ -105,10 +105,9 @@ npm run lint     # Run ESLint
 Development followed a feature-branch workflow:
 
 ```bash
-git checkout -b feat/landing-page
-# ... commits for landing page + auth ...
-git push origin feat/landing-page
-# Pull Request opened: feat/landing-page → main
+`feat/auth` → Login and Signup pages
+`feat/landing-page` → Landing page (`feat/auth` was merged into it via PR)
+`main` → Final merge from `feat/landing-page` via PR
 ```
 
 ## ☁️ Deployment
