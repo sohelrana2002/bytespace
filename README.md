@@ -102,13 +102,13 @@ npm run lint     # Run ESLint
 
 ## 🌱 Git Workflow
 
-Development followed a feature-branch workflow:
+Development followed a feature-branch workflow. No code was committed directly to `main`.
 
-```bash
-`feat/auth` → Login and Signup pages
-`feat/landing-page` → Landing page (`feat/auth` was merged into it via PR)
-`main` → Final merge from `feat/landing-page` via PR
-```
+- `feat/auth`: Login and Signup pages
+- `feat/landing-page`: Landing page. `feat/auth` was merged into it via pull request.
+- `main`: final merge from `feat/landing-page` via pull request
+
+**Flow:** `feat/auth` → `feat/landing-page` → `main`
 
 ## ☁️ Deployment
 
