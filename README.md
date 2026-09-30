@@ -41,6 +41,7 @@ src/
 │  ├─ not-found.tsx        # Custom 404 page
 │  ├─ login/page.tsx       # Login route
 │  └─ register/page.tsx    # Signup route
+│  └─ fonts/               # Satoshi fonts
 │
 ├─ components/
 │  ├─ ui/                  # Button, Chip, Logo, Rating, TextField, AvatarStack, Shape, Stage...
@@ -64,7 +65,7 @@ Design tokens — colors, type scale, and the 1200px content width — are defin
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/your-username/bytespace.git
+git clone https://github.com/sohelrana2002/bytespace.git
 cd bytespace
 npm install
 ```
