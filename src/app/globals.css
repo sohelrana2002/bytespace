@@ -1,26 +1,113 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  body {
+    @apply bg-white font-body text-body-m text-neutral-950 antialiased;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+
+  /* 12 column grid: 1200px content width with 120px page margins at 1440px */
+  .container-x {
+    @apply mx-auto w-full max-w-page px-5 md:px-8 xl:px-0;
+  }
+}
+
+@layer utilities {
+
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.12) 2px, transparent 2px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 2px, transparent 2px);
+    background-size: 120px 120px;
+    background-position: 0 118px;
+  }
+
+  .bg-glow-growth {
+    background:
+      radial-gradient(560px 560px at 22% 7%, rgba(212, 251, 32, 0.5), transparent 70%),
+      radial-gradient(460px 460px at 100% 5%, rgba(60, 90, 220, 0.16), transparent 70%),
+      radial-gradient(520px 520px at 0% 42%, rgba(60, 90, 220, 0.18), transparent 70%),
+      radial-gradient(600px 600px at 0% 97%, rgba(212, 251, 32, 0.55), transparent 70%),
+      radial-gradient(560px 560px at 95% 90%, rgba(60, 90, 220, 0.22), transparent 70%),
+      #fafafa;
+  }
+
+  .bg-glow-testimonials {
+    background:
+      radial-gradient(460px 460px at 47% 22%, rgba(212, 251, 32, 0.5), transparent 70%),
+      radial-gradient(560px 560px at 100% 32%, rgba(212, 251, 32, 0.45), transparent 70%),
+      radial-gradient(560px 460px at 6% 92%, rgba(60, 90, 220, 0.22), transparent 70%),
+      #fafafa;
+  }
+}
+
+
+@layer components {
+  .stage {
+    --stage-scale: 0.55;
+    position: relative;
+    margin-inline: auto;
+    width: calc(var(--stage-w) * var(--stage-scale));
+    height: calc(var(--stage-h) * var(--stage-scale));
+  }
+
+  .stage-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--stage-w);
+    height: var(--stage-h);
+    transform: scale(var(--stage-scale));
+    transform-origin: top left;
+  }
+
+  @media (min-width: 480px) {
+    .stage {
+      --stage-scale: 0.75;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .stage {
+      --stage-scale: 0.95;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .stage {
+      --stage-scale: 0.78;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .stage {
+      --stage-scale: 1;
+    }
+  }
 }

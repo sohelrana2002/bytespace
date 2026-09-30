@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ByteSpace New
 
-## Getting Started
+Landing page (plus bonus Login, Register and 404 pages) built from the ByteSpace Figma design.
 
-First, run the development server:
+**Stack:** Next.js 14 (App Router) · TypeScript · Tailwind CSS · lucide-react
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Routes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Route       | Description                         |
+| ----------- | ----------------------------------- |
+| `/`         | Landing page (required)             |
+| `/login`    | Sign in page (bonus)                |
+| `/register` | Sign up page (bonus)                |
+| any other   | Custom 404 page from the design     |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project structure
 
-## Learn More
+```
+src/
+  app/                 routes, layout, global styles
+  components/
+    ui/                Button, Chip, Logo, AvatarStack, Rating, TextField, Shape, Stage...
+    cards/             CourseCard, stat cards (progress, revenue, happy students...)
+    layout/            Header, Footer, NewsletterForm
+    sections/          Hero, LogoStrip, Courses, Categories, Growth, CreatorCta, Testimonials
+    auth/              AuthShell, AuthCard, LoginForm, RegisterForm, SocialButtons
+  data/                courses, categories, testimonials, navigation content
+  lib/                 cn helper, form validation
+public/
+  images/ logos/       assets exported from the Figma file
+```
 
-To learn more about Next.js, take a look at the following resources:
+Design tokens (colors, type scale, 1200px content width) live in `tailwind.config.ts`.
+Body font **Satoshi** is loaded from Fontshare; headings use **Poppins** via `next/font`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Login / Register / newsletter forms validate on the client only (no backend).
+- Decorative compositions use a small `Stage` helper that scales the desktop layout down on smaller screens.
 
-## Deploy on Vercel
+## Git workflow
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+git init
+git checkout -b feat/bytespace-landing
+git add . && git commit -m "feat: build ByteSpace landing, auth and 404 pages"
+git remote add origin <your-public-repo-url>
+git push -u origin feat/bytespace-landing   # then open a Pull Request into main
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
+
+Import the repository in Vercel (framework preset: Next.js) and deploy. No environment variables are needed.
