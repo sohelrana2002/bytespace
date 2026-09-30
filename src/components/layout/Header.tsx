@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, ShoppingBag, X } from "lucide-react";
-import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { Logo } from "@/components/ui/Logo";
 import { MAIN_NAV } from "@/data/navigation";
 import { cn } from "@/lib/cn";
@@ -11,6 +11,29 @@ import Image from "next/image";
 /** Transparent header that sits on top of the blue hero. */
 export function Header() {
   const [open, setOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const toggleBtnRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+
+    function handleClickOutside(event: MouseEvent) {
+      const target = event.target as Node;
+
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(target) &&
+        toggleBtnRef.current &&
+        !toggleBtnRef.current.contains(target)
+      ) {
+        setOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [open]);
 
   return (
     <header className="absolute inset-x-0 top-0 z-30">
@@ -57,6 +80,7 @@ export function Header() {
         </div>
 
         <button
+          ref={toggleBtnRef}
           type="button"
           className="justify-self-end text-white lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -69,7 +93,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <div id="mobile-menu" className="container-x lg:hidden">
+        <div id="mobile-menu" ref={menuRef} className="container-x lg:hidden">
           <div className="rounded-2xl bg-white p-6 shadow-lg">
             <nav aria-label="Mobile" className="flex flex-col gap-4">
               {[
