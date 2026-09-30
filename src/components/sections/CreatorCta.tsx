@@ -3,12 +3,15 @@ import { Shape } from "@/components/ui/Shape";
 
 function CtaShapes() {
   return (
-    <div aria-hidden="true" className="hidden lg:block">
+    <div
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-0 mx-auto hidden max-w-[1440px] xl:block"
+    >
       <Shape
         name="squiggle-b"
         color="lime"
         size={387}
-        className="left-[-122px] top-[-162px]"
+        className="left-[-160px] top-[-150px]"
       />
       <Shape
         name="squiggle-b"
@@ -21,13 +24,13 @@ function CtaShapes() {
         name="cone"
         color="white"
         size={189}
-        className="left-[-50px] top-[225px]"
+        className="left-[-90px] top-[225px]"
       />
       <Shape
         name="ring"
         color="lime"
         size={344}
-        className="left-[16px] top-[298px]"
+        className="left-[-10px] top-[298px]"
       />
       <Shape
         name="pyramid"
@@ -39,13 +42,13 @@ function CtaShapes() {
         name="cylinder"
         color="white"
         size={372}
-        className="right-[-154px] top-[5px]"
+        className="right-[-194px] top-[5px]"
       />
       <Shape
         name="squiggle-a"
         color="lime"
         size={332}
-        className="right-[1px] top-[310px]"
+        className="right-[-20px] top-[285px]"
       />
     </div>
   );
@@ -64,7 +67,7 @@ export function CreatorCta() {
         <h2 className="max-w-[640px] font-heading text-[32px] font-semibold leading-[1.2] text-white sm:text-[40px] lg:text-heading-m">
           Unlock Your Potential as a Creator with ByteSpace
         </h2>
-        <p className="mt-6 max-w-[840px] text-body-m text-white sm:text-body-l lg:mt-10">
+        <p className="mt-6 max-w-[964px] text-body-m text-white sm:text-body-l lg:mt-10">
           Experience the collaboration of numerous creators and an expanding
           selection of courses. Register now and become a part of a community
           comprising over 10,000 local and international creators. Utilize our

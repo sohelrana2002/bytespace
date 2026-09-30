@@ -4,12 +4,15 @@ import { HeroVisual } from "./HeroVisual";
 
 function HeroShapes() {
   return (
-    <div aria-hidden="true" className="hidden xl:block">
+    <div
+      aria-hidden="true"
+      className="hidden xl:block relative mx-auto h-0 max-w-[1440px]"
+    >
       <Shape
         name="squiggle-b"
         color="lime"
         size={387}
-        className="left-[-122px] top-[221px]"
+        className="left-[-160px] top-[221px]"
       />
       <Shape
         name="squiggle-b"
@@ -22,13 +25,13 @@ function HeroShapes() {
         name="ring"
         color="white"
         size={344}
-        className="left-[50px] top-[681px] z-20"
+        className="left-[15px] top-[681px] z-20"
       />
       <Shape
         name="cylinder"
         color="lime"
         size={372}
-        className="right-[-159px] top-[220px]"
+        className="left-[1260px] top-[220px]"
       />
       <Shape
         name="pyramid"
@@ -40,7 +43,7 @@ function HeroShapes() {
         name="squiggle-a"
         color="white"
         size={332}
-        className="right-[30px] top-[672px]"
+        className="right-[-16px] top-[672px]"
       />
     </div>
   );
@@ -53,7 +56,7 @@ export function Hero() {
       <HeroShapes />
 
       <div className="container-x relative z-10 flex flex-col items-center pt-[130px] text-center lg:pt-[169px]">
-        <h1 className="max-w-[900px] font-heading text-[40px] font-semibold leading-[1.2] text-white sm:text-[56px] lg:text-heading-l">
+        <h1 className="max-w-[900px] font-heading text-[32px] font-semibold leading-[1.2] text-white max-[380px]:text-[28px] sm:text-[56px] lg:text-heading-l">
           Get Access to Hundreds Courses Available
         </h1>
         <p className="mt-6 max-w-[840px] text-body-m text-white sm:text-body-l lg:mt-8">

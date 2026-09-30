@@ -93,7 +93,11 @@ export function Header() {
       </div>
 
       {open ? (
-        <div id="mobile-menu" ref={menuRef} className="container-x lg:hidden">
+        <div
+          id="mobile-menu"
+          ref={menuRef}
+          className="absolute inset-x-0 top-[104px] z-40 container-x lg:hidden"
+        >
           <div className="rounded-2xl bg-white p-6 shadow-lg">
             <nav aria-label="Mobile" className="flex flex-col gap-4">
               {[
